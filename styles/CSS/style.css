@@ -18,6 +18,7 @@ body {
 
 .main-title-container {
   margin-bottom: 2.5rem;
+  text-align: center;
 }
 
 .main-title-container h1 {
@@ -28,24 +29,20 @@ body {
 input {
   background-color: #292929;
   padding: 15px 25px;
+  max-width: 350px;
+  width: 100%;
   border-radius: 4px;
-  border: 1px solid #919191;
+  border: 1px solid #585858;
   outline: none;
   transition: 0.3s ease;
   color: #e0e0e0;
-  font-size: 25px;
+  font-size: 1.5rem;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 input:focus {
   border: 1px solid rgb(255, 239, 11);
-}
-input#user-text::-moz-placeholder {
-  font-size: 15px;
-}
-input#user-text::placeholder {
-  font-size: 15px;
 }
 
 #user-date {
@@ -57,7 +54,7 @@ input#user-text::placeholder {
   color: #0c0c0c;
   font-size: 30px;
   border-radius: 4px;
-  background-color: rgb(255, 239, 11);
+  background-color: #ffef0b;
   cursor: pointer;
   font-weight: 700;
   border: none;
@@ -141,4 +138,66 @@ input#user-text::placeholder {
 #message .message-title .div-span-seconds {
   color: #d3d3d3;
   font-size: 40px;
+}
+
+.flatpickr-calendar {
+  max-width: 350px;
+  width: 100%;
+  background: #292929;
+  border: 1px solid #585858;
+  color: #fff;
+  border-radius: 12px;
+  padding: 10px;
+}
+
+.flatpickr-months .flatpickr-month {
+  color: #fff;
+}
+
+.flatpickr-weekdays {
+  color: #fff;
+}
+
+.flatpickr-day.nextMonthDay {
+  color: #ececce;
+  background-color: #121212;
+}
+
+.flatpickr-day.selected,
+.flatpickr-day.startRange,
+.flatpickr-day.endRange {
+  background-color: #ffef0b !important;
+  color: #292929 !important;
+  border-radius: 50%;
+  border: 1px solid #121212;
+}
+
+.flatpickr-day.flatpickr-disabled {
+  cursor: not-allowed;
+  pointer-events: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  background-color: rgba(165, 165, 165, 0.12);
+  color: rgba(255, 255, 255, 0.3058823529);
+}
+
+.flatpickr-day {
+  margin: 4px;
+  background-color: #585858;
+  color: #fff;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flatpickr-day:hover {
+  background: #ffef0b;
+  color: #000;
+}
+
+.flatpickr-day.today {
+  border: 1px solid #ffef0b;
+  font-weight: bold;
 }/*# sourceMappingURL=style.css.map */

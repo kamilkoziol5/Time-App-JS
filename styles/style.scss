@@ -1,3 +1,5 @@
+@import "variables";
+
 * {
   margin: 0;
   padding: 0;
@@ -18,36 +20,30 @@ body {
 
 .main-title-container {
   margin-bottom: 2.5rem;
+  text-align: center;
 }
 .main-title-container h1 {
-  color: #fff;
+  color: $whiteColor;
   font-size: 3.7rem;
 }
 
 input {
-  background-color: #292929;
+  background-color: $grayBgColor;
   padding: 15px 25px;
+  max-width: 350px;
+  width: 100%;
   border-radius: 4px;
-  border: 1px solid #919191;
+  border: 1px solid $lightGray;
   outline: none;
   transition: 0.3s ease;
   color: #e0e0e0;
-  font-size: 25px;
+  font-size: 1.5rem;
   display: flex;
   align-items: center;
   justify-content: center;
 
   &:focus {
     border: 1px solid rgb(255, 239, 11);
-  }
-
-  &#user-text {
-    &::-moz-placeholder {
-      font-size: 15px;
-    }
-    &::placeholder {
-      font-size: 15px;
-    }
   }
 }
 
@@ -60,7 +56,7 @@ input {
   color: #0c0c0c;
   font-size: 30px;
   border-radius: 4px;
-  background-color: rgb(255, 239, 11);
+  background-color: $yellowAccent;
   cursor: pointer;
   font-weight: 700;
   border: none;
@@ -89,7 +85,7 @@ input {
 
   .message-title {
     padding: 15px;
-    border: 1px solid #585858;
+    border: 1px solid $lightGray;
     color: #e0e0e0;
     font-size: 60px;
     display: flex;
@@ -107,7 +103,7 @@ input {
       padding: 15px;
       background-color: transparent;
       color: white;
-      border: 1px solid #585858;
+      border: 1px solid $lightGray;
       font-size: 1.2rem;
       line-height: 1.2rem;
       position: absolute;
@@ -129,7 +125,7 @@ input {
 
     .div-span-timer {
       color: rgb(255, 239, 11);
-      border: 1px solid #585858;
+      border: 1px solid $lightGray;
       padding: 15px;
       margin: 20px 0;
       width: 100%;
@@ -155,4 +151,64 @@ input {
       font-size: 40px;
     }
   }
+}
+
+.flatpickr-calendar {
+  max-width: 350px;
+  width: 100%;
+  background: $grayBgColor;
+  border: 1px solid $lightGray;
+  color: $whiteColor;
+  border-radius: 12px;
+  padding: 10px;
+}
+
+.flatpickr-months .flatpickr-month {
+  color: $whiteColor;
+}
+
+.flatpickr-weekdays {
+  color: $whiteColor;
+}
+
+.flatpickr-day.nextMonthDay {
+  color: #ececce;
+  background-color: #121212;
+}
+
+.flatpickr-day.selected,
+.flatpickr-day.startRange,
+.flatpickr-day.endRange {
+  background-color: $yellowAccent !important;
+  color: $grayBgColor !important;
+  border-radius: 50%;
+  border: 1px solid #121212;
+}
+
+.flatpickr-day.flatpickr-disabled {
+  cursor: not-allowed;
+  pointer-events: none;
+  user-select: none;
+  background-color: rgba(165, 165, 165, 0.12);
+  color: #ffffff4e;
+}
+
+.flatpickr-day {
+  margin: 4px;
+  background-color: $lightGray;
+  color: #fff;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flatpickr-day:hover {
+  background: $yellowAccent;
+  color: #000;
+}
+
+.flatpickr-day.today {
+  border: 1px solid $yellowAccent;
+  font-weight: bold;
 }

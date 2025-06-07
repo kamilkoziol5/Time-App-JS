@@ -1,3 +1,9 @@
+flatpickr("#user-date", {
+  dateFormat: "Y-m-d",
+  minDate: "today",
+  locale: "pl",
+});
+
 const addBtn = document.querySelector("#time-button");
 const messageDiv = document.querySelector("#message");
 const userTextInput = document.querySelector("#user-text");

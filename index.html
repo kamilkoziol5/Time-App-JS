@@ -3,6 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Flatpickr CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"
+    />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -17,11 +23,12 @@
       <h1>Ile czasu zostało?</h1>
     </div>
 
-    <input type="date" id="user-date" />
+    <input type="text" id="user-date" placeholder="Wybierz swoją date" />
     <input type="text" id="user-text" placeholder="Co to będzie?" />
     <button id="time-button">Dodaj</button>
 
     <div id="message"></div>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
     <script src="main.js"></script>
   </body>
 </html>
