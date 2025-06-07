@@ -16,6 +16,15 @@ body {
   padding: 4em;
 }
 
+.main-title-container {
+  margin-bottom: 2.5rem;
+}
+
+.main-title-container h1 {
+  color: #fff;
+  font-size: 3.7rem;
+}
+
 input {
   background-color: #292929;
   padding: 15px 25px;
@@ -29,16 +38,13 @@ input {
   align-items: center;
   justify-content: center;
 }
-
 input:focus {
   border: 1px solid rgb(255, 239, 11);
 }
-
-#user-text::-moz-placeholder {
+input#user-text::-moz-placeholder {
   font-size: 15px;
 }
-
-#user-text::placeholder {
+input#user-text::placeholder {
   font-size: 15px;
 }
 
@@ -63,6 +69,7 @@ input:focus {
 }
 
 #message {
+  position: relative;
   margin-top: 2rem;
   width: 100%;
   text-align: center;
@@ -75,9 +82,9 @@ input:focus {
 #message.show {
   transform: translateY(0);
 }
-#message h2 {
+#message .message-title {
   padding: 15px;
-  border: 1px solid #919191;
+  border: 1px solid #585858;
   color: #e0e0e0;
   font-size: 60px;
   display: flex;
@@ -86,33 +93,52 @@ input:focus {
   justify-content: center;
   gap: 20px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.95);
+  position: relative;
 }
-#message h2 .h2-span-inline {
+#message .message-title .close-btn {
+  cursor: pointer;
+  width: 60px;
+  height: 60px;
+  padding: 15px;
+  background-color: transparent;
+  color: white;
+  border: 1px solid #585858;
+  font-size: 1.2rem;
+  line-height: 1.2rem;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+#message .message-title .close-btn:hover {
+  background-color: #656565;
+}
+#message .message-title .div-span-inline {
   font-size: 20px;
-  color: #686868;
+  color: #585858;
   font-weight: 400;
   text-decoration: underline;
   text-underline-offset: 5px;
 }
-#message h2 .h2-span-timer {
+#message .message-title .div-span-timer {
   color: rgb(255, 239, 11);
-  border: 1px solid #919191;
+  border: 1px solid #585858;
   padding: 15px;
   margin: 20px 0;
+  width: 100%;
 }
-#message h2 .h2-span-days {
+#message .message-title .div-span-days {
   color: rgb(255, 123, 15);
   font-size: 55px;
 }
-#message h2 .h2-span-hours {
+#message .message-title .div-span-hours {
   color: rgb(253, 196, 9);
   font-size: 50px;
 }
-#message h2 .h2-span-minutes {
+#message .message-title .div-span-minutes {
   color: rgb(229, 255, 85);
   font-size: 45px;
 }
-#message h2 .h2-span-seconds {
+#message .message-title .div-span-seconds {
   color: #d3d3d3;
   font-size: 40px;
 }/*# sourceMappingURL=style.css.map */
