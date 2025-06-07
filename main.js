@@ -1,7 +1,6 @@
 flatpickr("#user-date", {
   dateFormat: "Y-m-d",
   defaultDate: "2025-12-25",
-  inline: true, // na test
 });
 
 const addBtn = document.querySelector("#time-button");
