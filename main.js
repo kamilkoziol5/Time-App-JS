@@ -1,6 +1,5 @@
 flatpickr("#user-date", {
   dateFormat: "Y-m-d",
-  defaultDate: "2025-12-25",
   disableMobile: true,
 });
 
@@ -93,19 +92,19 @@ addBtn.addEventListener("click", () => {
 				 </span>
 			`;
 
-      const closeBtn = div.querySelector(".close-btn");
-      closeBtn.addEventListener("click", () => {
-        closeBtn.parentElement.remove();
-
-        if (messageDiv.children.length === 0) {
-          messageDiv.classList.remove("show");
-        }
-      });
-
       setTimeout(showtimer, 1000);
     } else {
-      h2.innerHTML = ` ${userText} 🟢 Czas już upłynął.`;
+      div.innerHTML = `      <button class="close-btn">X</button>
+ <h3> ${userText}</h3> 🟢 Czas już upłynął.`;
     }
+    const closeBtn = div.querySelector(".close-btn");
+    closeBtn.addEventListener("click", () => {
+      closeBtn.parentElement.remove();
+
+      if (messageDiv.children.length === 0) {
+        messageDiv.classList.remove("show");
+      }
+    });
   }
 
   showtimer(userDate);

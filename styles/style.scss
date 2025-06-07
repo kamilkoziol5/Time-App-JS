@@ -15,7 +15,7 @@ body {
   flex-direction: column;
   gap: 20px;
   min-height: 100dvh;
-  padding: 4em;
+  padding: 4em 4em 8em 4em;
 }
 
 .main-title-container {
@@ -88,6 +88,7 @@ input {
     padding: 30px;
     border: 1px solid $lightGray;
     color: #e0e0e0;
+    font-size: 2.5rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -169,18 +170,95 @@ input {
 
   &.open {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     max-width: 350px;
     width: 100%;
   }
 }
 
-.flatpickr-months .flatpickr-month {
+.flatpickr-weekdays {
+  color: $whiteColor !important
+  ;
+}
+.flatpickr-months {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #121212;
+  padding: 15px 0;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 1.1rem;
+  user-select: none;
+}
+
+.flatpickr-month {
+  color: #fff !important;
+  background: transparent !important;
+}
+
+.flatpickr-months .flatpickr-prev-month,
+.flatpickr-months .flatpickr-next-month {
+  fill: $whiteColor;
+}
+
+.flatpickr-months .flatpickr-prev-month:hover svg,
+.flatpickr-months .flatpickr-next-month:hover svg {
+  fill: $yellowAccent;
+}
+
+.flatpickr-current-month .flatpickr-monthDropdown-months {
+  background-color: $grayBgColor;
+  font-size: 1rem;
+
+  &:hover {
+    background-color: $yellowAccent;
+    color: $grayBgColor;
+  }
+}
+.numInputWrapper span {
+  opacity: 1;
+
+  &.arrowUp {
+    background-color: $lightGray;
+    transition: 200ms ease;
+    margin-bottom: 2px;
+
+    &:hover {
+      background-color: #8d8d8d;
+    }
+    &:after {
+      border-bottom: 4px solid $whiteColor !important;
+    }
+  }
+  &.arrowDown {
+    margin-top: 2px;
+    background-color: $lightGray;
+    transition: 200ms ease;
+
+    &:hover {
+      background-color: #8d8d8d;
+    }
+    &:after {
+      border-top: 4px solid $whiteColor !important;
+    }
+  }
+}
+
+.flatpickr-current-month {
+  padding: 0;
+}
+
+span.flatpickr-weekday {
   color: $whiteColor;
 }
 
-.flatpickr-weekdays {
-  color: $whiteColor;
+.flatpickr-day.prevMonthDay {
+  color: #ececce;
+  background-color: #12121254;
+  cursor: not-allowed;
+  pointer-events: none;
 }
 
 .flatpickr-day.nextMonthDay {
