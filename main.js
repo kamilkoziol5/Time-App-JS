@@ -1,7 +1,6 @@
 flatpickr("#user-date", {
   dateFormat: "Y-m-d",
   minDate: "today",
-  locale: "pl",
 });
 
 const addBtn = document.querySelector("#time-button");
