@@ -101,7 +101,7 @@ addBtn.addEventListener("click", () => {
         }
       });
 
-      // setTimeout(showtimer, 1000);
+      setTimeout(showtimer, 1000);
     } else {
       h2.innerHTML = ` ${userText} 🟢 Czas już upłynął.`;
     }
