@@ -20,7 +20,6 @@ body {
   margin-bottom: 2.5rem;
   text-align: center;
 }
-
 .main-title-container h1 {
   color: #fff;
   font-size: 3.7rem;
@@ -80,10 +79,9 @@ input:focus {
   transform: translateY(0);
 }
 #message .message-title {
-  padding: 15px;
+  padding: 30px;
   border: 1px solid #585858;
   color: #e0e0e0;
-  font-size: 60px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -91,6 +89,12 @@ input:focus {
   gap: 20px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.95);
   position: relative;
+}
+#message .message-title h3 {
+  word-wrap: break-word;
+  white-space: normal;
+  max-width: 80%;
+  font-size: 4rem;
 }
 #message .message-title .close-btn {
   cursor: pointer;
@@ -141,13 +145,17 @@ input:focus {
 }
 
 .flatpickr-calendar {
-  max-width: 350px;
-  width: 100%;
   background: #292929;
   border: 1px solid #585858;
   color: #fff;
   border-radius: 12px;
   padding: 10px;
+}
+.flatpickr-calendar.open {
+  display: flex;
+  justify-content: center;
+  max-width: 350px;
+  width: 100%;
 }
 
 .flatpickr-months .flatpickr-month {
@@ -183,7 +191,7 @@ input:focus {
 }
 
 .flatpickr-day {
-  margin: 4px;
+  margin: 2px;
   background-color: #585858;
   color: #fff;
   border-radius: 6px;
@@ -200,4 +208,45 @@ input:focus {
 .flatpickr-day.today {
   border: 1px solid #ffef0b;
   font-weight: bold;
+}
+
+@media (max-width: 920px) {
+  body {
+    padding: 1rem;
+  }
+  .main-title-container {
+    margin-bottom: 1.5rem;
+  }
+  .main-title-container h1 {
+    font-size: 2.5rem;
+  }
+  #message .message-title {
+    padding: 15px;
+  }
+  #message .message-title h3 {
+    font-size: 1.8rem;
+    max-width: 68%;
+  }
+  #message .message-title .close-btn {
+    width: 40px;
+    height: 40px;
+    padding: 10px;
+    font-size: 1rem;
+  }
+  #message .message-title .div-span-timer {
+    padding: 10px;
+    margin: 10px 0;
+  }
+  #message .message-title .div-span-days {
+    font-size: 2.5rem;
+  }
+  #message .message-title .div-span-hours {
+    font-size: 2.3rem;
+  }
+  #message .message-title .div-span-minutes {
+    font-size: 2.1rem;
+  }
+  #message .message-title .div-span-seconds {
+    font-size: 1.8rem;
+  }
 }/*# sourceMappingURL=style.css.map */

@@ -21,10 +21,11 @@ body {
 .main-title-container {
   margin-bottom: 2.5rem;
   text-align: center;
-}
-.main-title-container h1 {
-  color: $whiteColor;
-  font-size: 3.7rem;
+
+  h1 {
+    color: $whiteColor;
+    font-size: 3.7rem;
+  }
 }
 
 input {
@@ -84,10 +85,9 @@ input {
   }
 
   .message-title {
-    padding: 15px;
+    padding: 30px;
     border: 1px solid $lightGray;
     color: #e0e0e0;
-    font-size: 60px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -95,6 +95,13 @@ input {
     gap: 20px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.95);
     position: relative;
+
+    h3 {
+      word-wrap: break-word;
+      white-space: normal;
+      max-width: 80%;
+      font-size: 4rem;
+    }
 
     .close-btn {
       cursor: pointer;
@@ -154,13 +161,18 @@ input {
 }
 
 .flatpickr-calendar {
-  max-width: 350px;
-  width: 100%;
   background: $grayBgColor;
   border: 1px solid $lightGray;
   color: $whiteColor;
   border-radius: 12px;
   padding: 10px;
+
+  &.open {
+    display: flex;
+    justify-content: center;
+    max-width: 350px;
+    width: 100%;
+  }
 }
 
 .flatpickr-months .flatpickr-month {
@@ -194,7 +206,7 @@ input {
 }
 
 .flatpickr-day {
-  margin: 4px;
+  margin: 2px;
   background-color: $lightGray;
   color: #fff;
   border-radius: 6px;
@@ -212,3 +224,49 @@ input {
   border: 1px solid $yellowAccent;
   font-weight: bold;
 }
+
+@media (max-width: 920px) {
+  body {
+    padding: 1rem;
+  }
+  .main-title-container {
+    margin-bottom: 1.5rem;
+
+    h1 {
+      font-size: 2.5rem;
+    }
+  }
+  #message .message-title {
+    padding: 15px;
+    h3 {
+      font-size: 1.8rem;
+      max-width: 68%;
+    }
+
+    .close-btn {
+      width: 40px;
+      height: 40px;
+      padding: 10px;
+      font-size: 1rem;
+    }
+
+    .div-span-timer {
+      padding: 10px;
+      margin: 10px 0;
+    }
+    .div-span-days {
+      font-size: 2.5rem;
+    }
+    .div-span-hours {
+      font-size: 2.3rem;
+    }
+    .div-span-minutes {
+      font-size: 2.1rem;
+    }
+    .div-span-seconds {
+      font-size: 1.8rem;
+    }
+  }
+}
+
+

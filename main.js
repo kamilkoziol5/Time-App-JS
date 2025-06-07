@@ -83,7 +83,7 @@ addBtn.addEventListener("click", () => {
     if (!endTime) {
       div.innerHTML = `
       <button class="close-btn">X</button>
-			${userText} 
+			<h3>${userText} </h3>
 			<span class="div-span-inline">⏳ Do tej daty pozostało:</span>
 			<span class="div-span-timer">
 			<span class ="div-span-days">${days} dni </span>
@@ -102,7 +102,7 @@ addBtn.addEventListener("click", () => {
         }
       });
 
-      setTimeout(showtimer, 1000);
+      // setTimeout(showtimer, 1000);
     } else {
       h2.innerHTML = ` ${userText} 🟢 Czas już upłynął.`;
     }
